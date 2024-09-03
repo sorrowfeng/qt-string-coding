@@ -19,11 +19,12 @@ private slots:
     void onTextChanged();
 
 private:
-    void rawToUrlText();
-    void urlToEncodeText();
-    void urlToRawText();
-    void encodeToUrlText();
+    void rawToEncodeText();
+    void encodeToRawText();
 
+    QString processGroups(const QString &input);
+    QString processAlphaNumeric(const QString &segment);
+    QString processBackslashGroups(const QString &segment);
 
     QString toUrlEncoded(const QString &input);
     QString fromUrlEncoded(const QString &encodedInput);
